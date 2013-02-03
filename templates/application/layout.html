@@ -1,0 +1,75 @@
+<!doctype html>
+<!--[if lt IE 7]> <html style="background-image: url('<?= $bgp;?>')" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="sv"> <![endif]-->
+<!--[if IE 7]>    <html style="background-image: url('<?= $bgp;?>')" class="no-js lt-ie10 lt-ie9 lt-ie8" lang="sv"> <![endif]-->
+<!--[if IE 8]>    <html style="background-image: url('<?= $bgp;?>')" class="no-js lt-ie10 lt-ie9" lang="sv"> <![endif]-->
+<!--[if IE 9]>    <html style="background-image: url('<?= $bgp;?>')" class="no-js lt-ie10" lang="sv"> <![endif]-->
+<!--[if gt IE 9]><!--> <html style="background-image: url('<?= $bgp;?>')" class="no-js" lang="sv"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  {% block head %}
+  <title>{% block title %}{% endblock %}</title>
+  <!-- Styles: -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <!-- :Styles -->
+  {% endblock %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+  <link rel="apple-touch-icon" href="apple-touch-icon-57x57-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+
+  <!-- Microsoft home screen enhancements: -->
+  <meta name="msapplication-TileColor" content="#008060"/>
+  <meta name="msapplication-TileImage" content="apple-touch-icon-144x144-precomposed.png"/>
+  <!-- :Microsoft home screen enhancements -->
+
+
+  <!--[if lte IE 9]>
+    <script type="text/javascript"src="static/js/libs/nwm.js"></script>
+    <script type="text/javascript"src="static/js/libs/selectivizr.js"></script>
+    <script type="text/javascript"src="static/js/libs/html5shiv.js"></script>
+    <script type="text/javascript"src="static/js/libs/respond.min.js"></script>
+  <![endif]-->
+
+
+<!-- Modernizr:
+  <script src="static/js/libs/modernizr-2.5.3.min.js"></script>
+ -->
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header id="content">{% block content %}{% endblock %}</header>
+
+
+
+
+
+
+  <footer id="footer">
+    {% block footer %}
+    &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+    {% endblock %}
+  </footer>
+
+
+  <!-- Scripts: -->
+  <!-- :Scripts -->
+
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
