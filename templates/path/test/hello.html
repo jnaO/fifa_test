@@ -1,14 +1,27 @@
-<!doctype html>
-<html lang="sv">
-  <head>
-    <title>Hello!</title>
-  </head>
-  <body>
-    <p>Module Hello</p>
-    {% if name %}
-      <p>name: {{ name }}</p>
-    {% else %}
-      <p>noname</p>
-    {% endif %}
-  </body>
-</html>
+{% extends "application/layout.html" %}
+
+
+<!-- title -->
+{% block title %}
+  {% if name %}
+    {{ name }} - #CreunaCup user
+  {% else %}
+    #CreunaCup user page
+  {% endif %}
+{% endblock %}
+
+
+<!-- head -->
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+
+<!-- body -->
+{% block content %}
+  {% if name %}
+    <h1>Hello {{ name }}! Whatup?</h1>
+  {% else %}
+    <h1>Hello..</h1>
+  {% endif %}
+{% endblock %}
