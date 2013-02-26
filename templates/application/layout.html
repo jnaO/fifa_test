@@ -56,9 +56,9 @@
     {% endfor %}
     <h1>Fifa app with db</h1>
     {% if not session.logged_in %}
-      <a class="login" href="{{ url_for(login) }}">Login</a>
+      <a class="login" href="{{ url_for('login') }}">Login</a>
     {% else %}
-      <a class="logout" href="{{ url_for(logout) }}">Logout</a>
+      <a class="logout" href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
   </header><!-- /main-header -->
   <main>

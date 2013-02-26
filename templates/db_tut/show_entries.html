@@ -17,7 +17,7 @@
         <h2>{{ entry.title }}</h2>
         <p>{{ entry.text|safe }}</p>
       </li>
-    {{ else }}
+    {% else %}
       <li><p>no entries so far</p></li>
     {% endfor %}
   </ul>

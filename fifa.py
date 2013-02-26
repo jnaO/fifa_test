@@ -38,7 +38,7 @@ def connect_db():
 @fifa_app.route('/')
 def show_entries():
     cur = g.db.execute('select _title, _text from entries order by _id desc')
-    entries = [dict(_title=row[0], text=row[1]) for row in cur.fetchall()]
+    entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     return render_template('db_tut/show_entries.html', entries=entries)
 
 
@@ -52,7 +52,7 @@ def add_entry():
     return redirect(url_for('show_entries'))
 
 
-@fifa_app.route('/login', methods=['GET, POST'])
+@fifa_app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -64,7 +64,7 @@ def login():
             session['logged_in'] = True
             flash('You were logged in')
             return redirect(url_for('show_entries'))
-        return render_template('application/login.html', error=error)
+    return render_template('application/login.html', error=error)
 
 
 @fifa_app.route('/logout')
